@@ -275,3 +275,9 @@ var CodeINBlogs = () =>{
 var WhatsAppContact = () =>{
   window.open("https://api.whatsapp.com/send?phone=+917357022722&text=Hey there!")
 }
+function downloadResume() {
+  const link = document.createElement('a');
+  link.href = 'resume.pdf';  // Path to your resume
+  link.download = 'YourName_Resume.pdf'; // Name of the downloaded file
+  link.click();
+}

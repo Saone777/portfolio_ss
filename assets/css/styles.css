@@ -6,28 +6,21 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /*   
-        Purple: hsl(250, 66%, 75%)
-        Blue: hsl(207, 90%, 72%)
-        Pink: hsl(356, 66%, 75%)
-        Teal: hsl(174, 63%, 62%)
-  */
+  /* Color mode HSL(hue, saturation, lightness) */
+  --first-hue: 250; /* Hue for primary color */
+  --second-hue: 219; /* Another hue for secondary colors */
+  --sat: 100%;      /* Saturation */
+  --lig: 39.8%;     /* Lightness */
 
-  --first-hue: 250;
-  --sat: 66%;
-  --lig: 75%;
-  --second-hue: 219;
-  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
-  --title-color: hsl(var(--second-hue), 15%, 95%);
-  --text-color: hsl(var(--second-hue), 8%, 75%);
-  --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 48%, 8%);
-  --container-color: hsl(var(--second-hue), 32%, 12%);
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig)); /* Primary color */
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 35.8%); /* Alternate primary color */
+  --title-color: hsl(var(--second-hue), 15%, 95%); /* Title color */
+  --text-color: hsl(var(--second-hue), 8%, 75%); /* Main text color */
+  --text-color-light: hsl(var(--second-hue), 4%, 55%); /* Light text color */
+  --body-color: hsl(var(--second-hue), 48%, 8%); /* Body background color */
+  --container-color: hsl(var(--second-hue), 32%, 12%); /* Container background color */
 
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 1.75rem;
   --h1-font-size: 1.5rem;
@@ -46,20 +39,6 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
-}
-:root {
-  --first-hue: 250; /* Hue for primary color */
-  --sat: 100%;      /* Saturation */
-  --lig: 39.8%;     /* Lightness */
-  --second-hue: 219; /* Another hue for secondary colors */
-  
-  --first-color: hsl(var(--first-hue), var(--sat), var(--lig)); /* Primary color */
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 35.8%); /* Alternate primary color */
-  --title-color: hsl(var(--second-hue), 15%, 95%); /* Title color */
-  --text-color: hsl(var(--second-hue), 8%, 75%); /* Main text color */
-  --text-color-light: hsl(var(--second-hue), 4%, 55%); /* Light text color */
-  --body-color: hsl(var(--second-hue), 48%, 8%); /* Body background color */
-  --container-color: hsl(var(--second-hue), 32%, 12%); /* Container background color */
 }
 
 
@@ -122,6 +101,25 @@ button {
   border: none;
   outline: none;
 }
+/* Smaller Resume Button Styling */
+.resume-button {
+  padding: 0.5rem 1rem; /* Smaller padding */
+  font-size: 0.875rem;  /* Smaller font size (14px) */
+  background-color: var(--first-color);
+  color: var(--title-color);
+  border: none;
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+  border-radius: 0.25rem; /* Slightly smaller border radius */
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: var(--first-color-alt);
+  color: var(--text-color);
+}
+
+
 
 img {
   max-width: 100%;
